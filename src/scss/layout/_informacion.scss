@@ -1,0 +1,118 @@
+    @use'../base/variables' as v;
+    @use'../base/mixins' as m;
+    .contenedor {
+        margin-top: 6rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        background-image: url(/src/img/edificios.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        gap: 3rem;
+        @include m.desktop {
+            grid-template-columns: 60% 40%;
+        }
+        @include m.phone {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .info {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 1.2rem;
+        img {
+            width: 20rem;
+            border-radius: 50%;
+        }
+        p {
+            font-size: 1.8rem;
+            font-family: v.$fuenteParrafos;
+            font-weight: 600;
+            padding: 1rem;
+            line-height: 2;
+        }
+    }
+    
+    .frase {
+        color: v.$color1;
+        font-size: 2.3rem;
+        font-family: v.$fuenteTitulo;
+        letter-spacing: 1px;
+    }
+    
+    .frase--quote::before {
+        content: "\201c";
+        font-size: 4rem;
+        color: black;
+    }
+    
+    .citado {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        color: v.$color1;
+        font-size: 2rem;
+        p {
+            font-family: v.$fuenteTitulo;
+            letter-spacing: 1px;
+        }
+    }
+    
+    .cv {
+        color: black;
+        margin-top: 1.3rem;
+        font-family: v.$fuenteTitulo;
+        font-size: 2.3rem;
+        img {
+            width: 5rem;
+        }
+    }
+    
+    .subtitulo {
+        font-size: 2rem;
+        font-family: v.$fuenteTitulo;
+        letter-spacing: 1px;
+        color: v.$color1;
+        text-transform: uppercase;
+        @include m.tablet {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .skills {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .grid-three {
+        @include m.grid (2, 1rem);
+        @include m.desktop {
+            @include m.grid (4, 2rem);
+        }
+    }
+    
+    .skill {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+            width: 10rem;
+        }
+        .name-t {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-family: v.$fuenteTitulo;
+        }
+    }

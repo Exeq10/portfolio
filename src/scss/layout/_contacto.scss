@@ -1,0 +1,76 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.contacto {
+    background-color: v.$color1;
+    color: white;
+    padding: 2rem;
+}
+
+.inf {
+    font-size: 1.9rem;
+    margin: 1.5rem;
+    span {
+        color: v.$color2;
+    }
+}
+
+.div_inf {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    .--git {
+        width: 2.5rem;
+        img {
+            filter: invert(100%);
+        }
+    }
+    .--email {
+        width: 2.5rem;
+        img {
+            filter: invert(100%);
+        }
+    }
+    .--link {
+        width: 2.5rem;
+        img {
+            filter: invert(100%);
+        }
+    }
+}
+
+.--white {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.p_contacto {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    img {
+        filter: invert(100%);
+        width: 6rem;
+        height: 6rem;
+    }
+    @include m.desktop {
+        margin: 0;
+    }
+}
+
+.footer {
+    padding: 2rem;
+    font-size: 1.3rem;
+    background-color: v.$color1;
+    color: white;
+    display: flex;
+    justify-content: end;
+    font-family: v.$fuenteParrafos;
+}

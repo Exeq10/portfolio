@@ -1,0 +1,56 @@
+@use'../base/mixins' as m;
+@use'../base/variables' as v;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    display: block;
+    width: 100%;
+}
+
+.visto {
+    @include m.visto
+}
+
+.oculto {
+    @include m.oculto;
+    visibility: hidden;
+}
+
+.menu-ver {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 8rem;
+    img {
+        filter: invert(100%);
+    }
+    @include m.tablet {
+        display: none;
+    }
+}
+
+.menu-oculto {
+    display: none;
+}

@@ -1,0 +1,103 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.cards {
+    margin-top: 6rem;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    @include m.grid (1, 2rem);
+    @include m.tablet {
+        @include m.grid (3, 2rem);
+    }
+}
+
+.cards-4 {
+    margin-top: 6rem;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    @include m.grid (1, 2rem);
+    @include m.tablet {
+        @include m.grid (4, 2rem);
+    }
+}
+
+.card-img-top {
+    transition: all 300ms;
+}
+
+.card-img-top:hover {
+    transform: scale(1.2);
+}
+
+.card-m {
+    width: 100%;
+    border: 1px solid rgb(160, 155, 155);
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
+    -moz-box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
+    box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
+    transition: all 800ms;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        width: 15rem;
+    }
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.data {
+    font-size: 2rem;
+    font-family: v.$fuenteParrafos;
+}
+
+.card--blue {
+    &:hover {
+        img {
+            filter: invert(100%);
+        }
+        .subtitulo {
+            color: white
+        }
+        p {
+            color: white;
+        }
+        background-color: v.$color1;
+    }
+}
+
+.card--lightblue {
+    &:hover {
+        img {
+            filter: invert(100%);
+        }
+        .subtitulo {
+            color: white
+        }
+        p {
+            color: white;
+        }
+        background-color: v.$color4;
+    }
+}
+
+.card--light {
+    &:hover {
+        img {
+            filter: invert(100%);
+        }
+        .subtitulo {
+            color: white
+        }
+        p {
+            color: white;
+        }
+        background-color: v.$color3;
+    }
+}
