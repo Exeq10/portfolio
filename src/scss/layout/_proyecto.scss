@@ -1,41 +1,74 @@
 @use'../base/variables' as v;
 @use'../base/mixins' as m;
-.card {
-    max-width: 40rem;
-    border-radius: 1rem;
-    -webkit-box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
-    -moz-box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
-    box-shadow: -1px 0px 12px 0px rgb(160, 155, 155);
-    transition: all 2s;
-    img {
+
+
+.card{
+    width: 100%;
+    height: 25rem;
+    position: relative;
+   
+-webkit-box-shadow: 10px 0px 15px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 0px 15px -4px rgba(0,0,0,0.75);
+box-shadow: 10px 0px 15px -4px rgba(0,0,0,0.75);
+border-radius: 1rem;
+
+    img{
+        height: 100%;
         border-radius: 1rem;
-    }
-    h3 {
-        font-size: 2rem;
-        font-family: v.$fuenteTitulo;
-        color: v.$color1;
-        text-transform: uppercase;
+       
     }
 }
 
-.--tranlatea:hover {
-    z-index: 1;
-}
 
-.card-text {
-    font-size: 1.8rem;
-}
-
-.card-body {
-    margin-top: 4rem;
-}
-
-.iconos {
+.overlay_card{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    background-color:#1a3042c5;
+    opacity: 0;
+    transition: 300ms all linear;
+ 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 1rem;
+
+    a{
+        margin-top: 1rem;
+        color: white;
+        
+        h3{
+            font-size: 3rem;
+            transition: all 300ms ;
+            &:hover{
+                transform: scale(1.3);
+            }
+        }
+    }
+    img{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 6rem;
+        filter: invert(100%);
+        transition: all 300ms;
+
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+    p{
+        color: white;
+        font-size: 1.5rem;
+    }
 }
 
-.icon {
-    width: 6rem;
+.card:hover .overlay_card{
+    height: 100%;
+    opacity: 1;
+
 }
+
+ 
+
